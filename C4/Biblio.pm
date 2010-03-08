@@ -1366,7 +1366,7 @@ The note are stored in differents places depending on MARC flavour
 sub GetMarcNotes {
     my ( $record, $marcflavour ) = @_;
     my $scope;
-    if ( $marcflavour eq "MARC21" || $marcflavour eq "NORMARC" ) {
+    if ( $marcflavour eq "MARC21" || $marcflavour eq "NORMARC" ) {
         $scope = '5..';
     } else {    # assume unimarc if not marc21
         $scope = '3..';
