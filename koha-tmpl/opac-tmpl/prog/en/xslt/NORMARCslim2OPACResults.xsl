@@ -102,7 +102,41 @@
             <!-- 019$b from BSMARC -->
             
             <xsl:if test="$field019b">
-				<xsl:if test="$field019b='a'"> Kartografisk materiale</xsl:if>				<xsl:if test="contains($field019b,'ab')"> Atlas</xsl:if>				<xsl:if test="contains($field019b,'aj')"> Kart</xsl:if>				<xsl:if test="$field019b='b'"> Manuskripter</xsl:if>				<xsl:if test="$field019b='c'"> Musikktrykk</xsl:if>				<xsl:if test="$field019b='d'"> Lydopptak</xsl:if>				<xsl:if test="contains($field019b,'da')"> Grammofonplate</xsl:if>				<xsl:if test="contains($field019b,'db')"> Kassett</xsl:if>				<xsl:if test="contains($field019b,'dc')"> Kompaktplate</xsl:if>				<xsl:if test="contains($field019b,'dd')"> Avspiller med lydfil (eks. Digibøker)</xsl:if>				<xsl:if test="contains($field019b,'dg')"> Musikk</xsl:if>				<xsl:if test="contains($field019b,'dh')"> Språkkurs</xsl:if>				<xsl:if test="contains($field019b,'di')"> Lydbok</xsl:if>				<xsl:if test="contains($field019b,'dj')"> Annen tale/annet</xsl:if>				<xsl:if test="contains($field019b,'dk')"> Kombidokument</xsl:if>				<xsl:if test="$field019b='e'"> Film og video</xsl:if>				<xsl:if test="contains($field019b,'ec')"> Filmspole</xsl:if>				<xsl:if test="contains($field019b,'ed')"> Videokassett (VHS)</xsl:if>				<xsl:if test="contains($field019b,'ee')"> Videoplate (DVD)</xsl:if>				<xsl:if test="contains($field019b,'ef')"> Blu-ray-plate</xsl:if>				<xsl:if test="$field019b='f'"> Grafisk materiale</xsl:if>				<xsl:if test="contains($field019b,'fd')"> Dias</xsl:if>				<xsl:if test="contains($field019b,'ff')"> Fotografi</xsl:if>				<xsl:if test="contains($field019b,'fi')"> Kunstreproduksjon</xsl:if>				<xsl:if test="$field019b='g'"> Elektroniske ressurser</xsl:if>				<xsl:if test="contains($field019b,'gb')"> Diskett</xsl:if>				<xsl:if test="contains($field019b,'gd')"> Optiske lagringsmedia (CD-ROM)</xsl:if>				<xsl:if test="contains($field019b,'ge')"> Nettressurser</xsl:if>				<xsl:if test="$field019b='h'"> Tredimensjonale gjenstander</xsl:if>				<xsl:if test="$field019b='i'"> Mikroformer</xsl:if>				<xsl:if test="contains($field019b,'ib')"> Mikrofilmspole</xsl:if>				<xsl:if test="contains($field019b,'ic')"> Mikrofilmkort</xsl:if>				<xsl:if test="$field019b='j'"> Periodika</xsl:if>				<xsl:if test="$field019b='k'"> Artikler (i bøker eller periodika)</xsl:if>				<xsl:if test="$field019b='l'"> Fysiske bøker</xsl:if>
+				<xsl:if test="$field019b='a'"> Kartografisk materiale</xsl:if>
+				<xsl:if test="contains($field019b,'ab')"> Atlas</xsl:if>
+				<xsl:if test="contains($field019b,'aj')"> Kart</xsl:if>
+				<xsl:if test="$field019b='b'"> Manuskripter</xsl:if>
+				<xsl:if test="$field019b='c'"> Musikktrykk</xsl:if>
+				<xsl:if test="$field019b='d'"> Lydopptak</xsl:if>
+				<xsl:if test="contains($field019b,'da')"> Grammofonplate</xsl:if>
+				<xsl:if test="contains($field019b,'db')"> Kassett</xsl:if>
+				<xsl:if test="contains($field019b,'dc')"> Kompaktplate</xsl:if>
+				<xsl:if test="contains($field019b,'dd')"> Avspiller med lydfil (eks. Digibøker)</xsl:if>
+				<xsl:if test="contains($field019b,'dg')"> Musikk</xsl:if>
+				<xsl:if test="contains($field019b,'dh')"> Språkkurs</xsl:if>
+				<xsl:if test="contains($field019b,'di')"> Lydbok</xsl:if>
+				<xsl:if test="contains($field019b,'dj')"> Annen tale/annet</xsl:if>
+				<xsl:if test="contains($field019b,'dk')"> Kombidokument</xsl:if>
+				<xsl:if test="$field019b='e'"> Film og video</xsl:if>
+				<xsl:if test="contains($field019b,'ec')"> Filmspole</xsl:if>
+				<xsl:if test="contains($field019b,'ed')"> Videokassett (VHS)</xsl:if>
+				<xsl:if test="contains($field019b,'ee')"> Videoplate (DVD)</xsl:if>
+				<xsl:if test="contains($field019b,'ef')"> Blu-ray-plate</xsl:if>
+				<xsl:if test="$field019b='f'"> Grafisk materiale</xsl:if>
+				<xsl:if test="contains($field019b,'fd')"> Dias</xsl:if>
+				<xsl:if test="contains($field019b,'ff')"> Fotografi</xsl:if>
+				<xsl:if test="contains($field019b,'fi')"> Kunstreproduksjon</xsl:if>
+				<xsl:if test="$field019b='g'"> Elektroniske ressurser</xsl:if>
+				<xsl:if test="contains($field019b,'gb')"> Diskett</xsl:if>
+				<xsl:if test="contains($field019b,'gd')"> Optiske lagringsmedia (CD-ROM)</xsl:if>
+				<xsl:if test="contains($field019b,'ge')"> Nettressurser</xsl:if>
+				<xsl:if test="$field019b='h'"> Tredimensjonale gjenstander</xsl:if>
+				<xsl:if test="$field019b='i'"> Mikroformer</xsl:if>
+				<xsl:if test="contains($field019b,'ib')"> Mikrofilmspole</xsl:if>
+				<xsl:if test="contains($field019b,'ic')"> Mikrofilmkort</xsl:if>
+				<xsl:if test="$field019b='j'"> Periodika</xsl:if>
+				<xsl:if test="$field019b='k'"> Artikler (i bøker eller periodika)</xsl:if>
+				<xsl:if test="$field019b='l'"> Fysiske bøker</xsl:if>
             </xsl:if>
             
             <!-- Check positions 00 and 01 of controlfield 007 -->
@@ -661,44 +695,21 @@
 
     </xsl:if>
 
-    <span class="results_summary">
-			   <span class="label">Tilgjengelighet: </span>
-			        <xsl:choose>
-                        <xsl:when test="marc:datafield[@tag=856]">
-                            <xsl:for-each select="marc:datafield[@tag=856]">
-                                <xsl:choose>
-                                    <xsl:when test="@ind2=0">
-                                    <a><xsl:attribute name="href"><xsl:value-of select="marc:subfield[@code='u']"/></xsl:attribute>
-                                    <xsl:choose>
-                                    <xsl:when test="marc:subfield[@code='y' or @code='3' or @code='z']">
-                                        <xsl:call-template name="subfieldSelect">                        
-                                        <xsl:with-param name="codes">y3z</xsl:with-param>                    
-                                        </xsl:call-template>
-                                    </xsl:when>
-                                    <xsl:when test="not(marc:subfield[@code='y']) and not(marc:subfield[@code='3']) and not(marc:subfield[@code='z'])">
-                                    Klikk her for online tilgang
-                                    </xsl:when>
-                                    </xsl:choose>
-                                    </a>
-                                    <xsl:choose>
-                                    <xsl:when test="position()=last()"></xsl:when>
-                                    <xsl:otherwise> | </xsl:otherwise>
-                                    </xsl:choose>
-                                    </xsl:when> 
-                                </xsl:choose>
-                            </xsl:for-each>
-                        </xsl:when>
-
-				   <xsl:when test="count(key('item-by-status', 'available'))=0 and count(key('item-by-status', 'reference'))=0">Ingen tilgjengelige eksemplarer
+<span class="results_summary">
+                        <span class="label">Availability: </span>
+                        <xsl:choose>
+				   <xsl:when test="count(key('item-by-status', 'available'))=0 and count(key('item-by-status', 'reference'))=0">No copies available
 				   </xsl:when>
+
                    <xsl:when test="count(key('item-by-status', 'available'))>0">
                    <span class="available">
-                       <b><xsl:text>Tilgjengelige eksemplarer: </xsl:text></b>
+                       <b><xsl:text>Copies available for loan: </xsl:text></b>
                        <xsl:variable name="available_items"
                            select="key('item-by-status', 'available')"/>
                        <xsl:for-each select="$available_items[generate-id() = generate-id(key('item-by-status-and-branch', concat(items:status, ' ', items:homebranch))[1])]">
                            <xsl:value-of select="items:homebranch"/>
-						   <xsl:if test="items:itemcallnumber != '' and items:itemcallnumber">[<xsl:value-of select="items:itemcallnumber"/>]</xsl:if>
+						   <xsl:if test="items:itemcallnumber != '' and items:itemcallnumber"> [<xsl:value-of select="items:itemcallnumber"/>]</xsl:if>
+
                            <xsl:text> (</xsl:text>
                            <xsl:value-of select="count(key('item-by-status-and-branch', concat(items:status, ' ', items:homebranch)))"/>
                            <xsl:text>)</xsl:text>
@@ -706,65 +717,80 @@
                        </xsl:for-each>
                    </span>
                    </xsl:when>
+
 				   </xsl:choose>
 
                    <xsl:choose>
                    <xsl:when test="count(key('item-by-status', 'reference'))>0">
                    <span class="available">
-                       <b><xsl:text>Referanse-eksemplarer: </xsl:text></b>
+                       <b><xsl:text>Copies available for reference: </xsl:text></b>
                        <xsl:variable name="reference_items"
                            select="key('item-by-status', 'reference')"/>
                        <xsl:for-each select="$reference_items[generate-id() = generate-id(key('item-by-status-and-branch', concat(items:status, ' ', items:homebranch))[1])]">
                            <xsl:value-of select="items:homebranch"/>
-						   <xsl:if test="items:itemcallnumber != '' and items:itemcallnumber">[<xsl:value-of select="items:itemcallnumber"/>]</xsl:if>
+
+						   <xsl:if test="items:itemcallnumber != '' and items:itemcallnumber"> [<xsl:value-of select="items:itemcallnumber"/>]</xsl:if>
                            <xsl:text> (</xsl:text>
                            <xsl:value-of select="count(key('item-by-status-and-branch', concat(items:status, ' ', items:homebranch)))"/>
                            <xsl:text>)</xsl:text>
                    <xsl:choose><xsl:when test="position()=last()"><xsl:text>. </xsl:text></xsl:when><xsl:otherwise><xsl:text>, </xsl:text></xsl:otherwise></xsl:choose>
+
                        </xsl:for-each>
                    </span>
                    </xsl:when>
                    </xsl:choose>
 
-					<!-- TODO Check the values that are being checked here! -->
                    <xsl:if test="count(key('item-by-status', 'Checked out'))>0">
                    <span class="unavailable">
-                       <xsl:text>Utlånt (</xsl:text>
+                       <xsl:text>Checked out (</xsl:text>
                        <xsl:value-of select="count(key('item-by-status', 'Checked out'))"/>
+
                        <xsl:text>). </xsl:text>
 				   </span>
                    </xsl:if>
                    <xsl:if test="count(key('item-by-status', 'Withdrawn'))>0">
                    <span class="unavailable">
-                       <xsl:text>Trukket tilbake (</xsl:text>
+                       <xsl:text>Withdrawn (</xsl:text>
                        <xsl:value-of select="count(key('item-by-status', 'Withdrawn'))"/>
                        <xsl:text>). </xsl:text>                   </span>
+
 				   </xsl:if>
                     <xsl:if test="count(key('item-by-status', 'Lost'))>0">
                    <span class="unavailable">
-                       <xsl:text>Tapt (</xsl:text>
+                       <xsl:text>Lost (</xsl:text>
                        <xsl:value-of select="count(key('item-by-status', 'Lost'))"/>
                        <xsl:text>). </xsl:text>                   </span>
 				   </xsl:if>
+
                     <xsl:if test="count(key('item-by-status', 'Damaged'))>0">
                    <span class="unavailable">
-                       <xsl:text>Skadet (</xsl:text>
+                       <xsl:text>Damaged (</xsl:text>
                        <xsl:value-of select="count(key('item-by-status', 'Damaged'))"/>
                        <xsl:text>). </xsl:text>                   </span>
                    </xsl:if>
                     <xsl:if test="count(key('item-by-status', 'On order'))>0">
+
                    <span class="unavailable">
-                       <xsl:text>I bestilling (</xsl:text>
+                       <xsl:text>On order (</xsl:text>
                        <xsl:value-of select="count(key('item-by-status', 'On order'))"/>
                        <xsl:text>). </xsl:text>                   </span>
                    </xsl:if>
                     <xsl:if test="count(key('item-by-status', 'In transit'))>0">
                    <span class="unavailable">
-                       <xsl:text>Under vegs (</xsl:text>
+
+                       <xsl:text>In transit (</xsl:text>
                        <xsl:value-of select="count(key('item-by-status', 'In transit'))"/>
                        <xsl:text>). </xsl:text>                   </span>
                    </xsl:if>
+                    <xsl:if test="count(key('item-by-status', 'Waiting'))>0">
+                   <span class="unavailable">
+                       <xsl:text>On hold (</xsl:text>
+
+                       <xsl:value-of select="count(key('item-by-status', 'Waiting'))"/>
+                       <xsl:text>). </xsl:text>                   </span>
+                   </xsl:if>
                </span>
+
     </xsl:template>
 
     <xsl:template name="termsOfAddress">
