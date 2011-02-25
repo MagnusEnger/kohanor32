@@ -1237,18 +1237,7 @@ sub GetNormalizedISBN {
     }
     return undef unless $record;
 
-    if ($marcflavour eq 'MARC21') {
-        @fields = $record->field('020');
-        foreach my $field (@fields) {
-            $isbn = $field->subfield('a');
-            if ($isbn) {
-                return _isbn_cleanup($isbn);
-            } else {
-                return undef;
-            }
-        }
-    }
-    else { # assume unimarc if not marc21
+    if ($marcflavour eq 'UNIMARC') {
         @fields = $record->field('010');
         foreach my $field (@fields) {
             my $isbn = $field->subfield('a');
@@ -1259,7 +1248,17 @@ sub GetNormalizedISBN {
             }
         }
     }
-
+    else { # assume marc21 or normarc if not unimarc
+        @fields = $record->field('020');
+        foreach my $field (@fields) {
+            $isbn = $field->subfield('a');
+            if ($isbn) {
+                return _isbn_cleanup($isbn);
+            } else {
+                return undef;
+            }
+        }
+    }
 }
 
 sub GetNormalizedEAN {
