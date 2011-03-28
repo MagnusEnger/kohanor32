@@ -1203,21 +1203,22 @@ sub GetNormalizedUPC {
  my ($record,$marcflavour) = @_;
     my (@fields,$upc);
 
-    if ($marcflavour eq 'MARC21') {
+    if ($marcflavour eq 'UNIMARC') {
+        @fields = $record->field('072');
+        foreach my $field (@fields) {
+            my $upc = _normalize_match_point($field->subfield('a'));
+            if ($upc ne '') {
+                return $upc;
+            }
+        }
+
+    }
+    else { # assume marc21 if not unimarc
         @fields = $record->field('024');
         foreach my $field (@fields) {
             my $indicator = $field->indicator(1);
             my $upc = _normalize_match_point($field->subfield('a'));
             if ($indicator == 1 and $upc ne '') {
-                return $upc;
-            }
-        }
-    }
-    else { # assume unimarc if not marc21
-        @fields = $record->field('072');
-        foreach my $field (@fields) {
-            my $upc = _normalize_match_point($field->subfield('a'));
-            if ($upc ne '') {
                 return $upc;
             }
         }
@@ -1248,7 +1249,7 @@ sub GetNormalizedISBN {
             }
         }
     }
-    else { # assume marc21 or normarc if not unimarc
+    else { # assume marc21 if not unimarc
         @fields = $record->field('020');
         foreach my $field (@fields) {
             $isbn = $field->subfield('a');
@@ -1265,7 +1266,16 @@ sub GetNormalizedEAN {
     my ($record,$marcflavour) = @_;
     my (@fields,$ean);
 
-    if ($marcflavour eq 'MARC21') {
+    if ($marcflavour eq 'UNIMARC') {
+        @fields = $record->field('073');
+        foreach my $field (@fields) {
+            $ean = _normalize_match_point($field->subfield('a'));
+            if ($ean ne '') {
+                return $ean;
+            }
+        }
+    }
+    else { # assume marc21 if not unimarc
         @fields = $record->field('024');
         foreach my $field (@fields) {
             my $indicator = $field->indicator(1);
@@ -1275,21 +1285,15 @@ sub GetNormalizedEAN {
             }
         }
     }
-    else { # assume unimarc if not marc21
-        @fields = $record->field('073');
-        foreach my $field (@fields) {
-            $ean = _normalize_match_point($field->subfield('a'));
-            if ($ean ne '') {
-                return $ean;
-            }
-        }
-    }
 }
 sub GetNormalizedOCLCNumber {
     my ($record,$marcflavour) = @_;
     my (@fields,$oclc);
 
-    if ($marcflavour eq 'MARC21') {
+    if ($marcflavour eq 'UNIMARC') {
+        # TODO: add UNIMARC fields
+    }
+    else { # assume marc21 if not unimarc
         @fields = $record->field('035');
         foreach my $field (@fields) {
             $oclc = $field->subfield('a');
@@ -1300,8 +1304,6 @@ sub GetNormalizedOCLCNumber {
                 return undef;
             }
         }
-    }
-    else { # TODO: add UNIMARC fields
     }
 }
 
