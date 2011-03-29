@@ -1482,7 +1482,7 @@ sub GetMarcAuthors {
     if ( $marcflavour eq "UNIMARC" ) {
         $mintag = "700";
         $maxtag = "712";
-    } elsif ( $marcflavour eq "MARC21" || $marcflavour eq "NORMARC" ) {   # assume marc21 or normarc if not unimarc
+    } elsif ( $marcflavour eq "MARC21" || $marcflavour eq "NORMARC" ) { # assume marc21 or normarc if not unimarc
         $mintag = "700";
         $maxtag = "720";
     } else {
